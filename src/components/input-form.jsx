@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const Input = (props) => {
-    let { className, disabled,...others} = props;
-
+export const InputForm = (props) => {
+    let { className, label,disabled,...others } = props;
     return (
         <div>
+            <div className="mt ph-4 font-ubuntu fs-12 lh-18">{label}</div>
             {
             disabled ? <input className={`input ${className} disabled`} {...others} />:
             <input className={`input ${className}`} {...others} />
